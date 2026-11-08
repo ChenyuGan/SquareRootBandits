@@ -3,7 +3,7 @@
 A Lean 4 formalization of the main regret bound in
 [Square-Root Regret for Adversarial Multiplayer Bandits without Collision Information or Shared Randomness](https://arxiv.org/abs/2610.05688v2).
 
-The paper establishes expected regret
+The paper establishes expected regret for adversarial multiplayer bandits
 
 $$
 O\left(m^{3/2}\sqrt{KT}\log^2(KmT)\right)
