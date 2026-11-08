@@ -6,7 +6,7 @@ A Lean 4 formalization of the main regret bound in
 The paper establishes expected regret
 
 $$
-O\!\left(m^{3/2}\sqrt{KT}\log^2(KmT)\right)
+O\left(m^{3/2}\sqrt{KT}\log^2(KmT)\right)
 $$
 
 without collision information, shared randomness or a separate communication channel.
