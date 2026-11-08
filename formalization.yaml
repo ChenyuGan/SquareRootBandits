@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: v0.4
+project:
+  name: SquareRootBandits
+  description: >-
+    Lean 4 formalization of the main regret bound for adversarial multiplayer
+    bandits without collision information or shared randomness.
+  authors:
+    - SquareRootBandits contributors
+  license: Apache-2.0
+sources:
+  - title: Square-Root Regret for Adversarial Multiplayer Bandits without Collision Information or Shared Randomness
+    type: paper
+    id: arxiv:2610.05688v2
+    relationship: formalizes
+    note: Main regret bound and public-table guarantee; computational complexity excluded.
+status:
+  scope: >-
+    The main regret bound, measurable local-policy construction and uniform
+    good-public-output guarantee. The polynomial-time computational complexity
+    claim is not formalized. The statement map is in CORRESPONDENCE.md.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: Bandits.Support.Frozen.MainRegret.exists_uniform_actual_main_regret_bound
+      file: Bandits/Support/Frozen/MainRegret.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+automation:
+  methods:
+    - method: agent
+      models: [gpt-6-luna, gpt-6.1-sol]
+      framework: Codex
+      tool_setup: Lean 4.35.0 and pinned Mathlib, with kernel replay and axiom audits.
+  notes: >-
+    AI coding agents assisted proof writing and review under maintainer
+    supervision. Lean checks proofs of the formal declarations. Mathematical
+    declarations and proofs are preserved; historical VM paths were removed
+    from comments in the publication copy.
+review:
+  status: agent-reviewed
+  notes: >-
+    The main declaration and meaning-carrying definitions were approved during
+    development. Agent-assisted correspondence reviews and kernel/axiom audits
+    are distinct from external peer review. No external peer review is claimed.
+alignment:
+  namespace: Bandits
+  statements:
+    - source: Main result, regret component and public-table probability guarantee
+      lean: Bandits.Support.Frozen.MainRegret.exists_uniform_actual_main_regret_bound
+      module: Bandits.Support.Frozen.MainRegret
+      status: proved
+acknowledgements: Built on Lean 4, Mathlib, elan and Lake; workflow informed by the LeanAutoformalizationSkills project.

@@ -1,0 +1,8 @@
+.lake/
+lake-packages/
+*.olean
+*.olean.server
+*.olean.private
+*.ilean
+*.log
+.DS_Store

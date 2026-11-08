@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the paper linked in README.md for the mathematical result.
+  This file provides citation metadata for the Lean development.
+type: software
+title: SquareRootBandits
+authors:
+  - name: SquareRootBandits contributors
+version: 0.1.0
+date-released: '2026-11-08'
+license: Apache-2.0
+repository-code: https://github.com/ChenyuGan/SquareRootBandits
+url: https://github.com/ChenyuGan/SquareRootBandits
+abstract: >-
+  Lean 4 formalization of the main regret bound for adversarial multiplayer
+  bandits without collision information or shared randomness. The computational
+  complexity claim is outside the scope of the formalization.
